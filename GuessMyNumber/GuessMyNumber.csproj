@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicNumber.cs" />
+    <Compile Include="ComputerPlays.cs" />
     <Compile Include="HumanPlays.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
