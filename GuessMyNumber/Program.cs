@@ -10,6 +10,10 @@ namespace GuessMyNumber
     {
         static void Main(string[] args)
         {
+            BasicNumber BN = new BasicNumber();
+
+            BN.NumberPicker();
+            BN.Bisector();
         }
     }
 }
