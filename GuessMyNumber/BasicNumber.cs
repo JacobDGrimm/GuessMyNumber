@@ -36,7 +36,7 @@ namespace GuessMyNumber
 
         public void Bisector(int[] num)
         {
-            int[] newr = new int[(num.Length / 2)];
+            int[] newr = new int[(num.Length / 2)+(num.Length % 2)];
             if (num.Length == 1)
             {
                 if (num[0] == chosenNumber)

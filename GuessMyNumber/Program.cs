@@ -10,6 +10,8 @@ namespace GuessMyNumber
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Basic implimentation of bisection");
+
             BasicNumber BN = new BasicNumber();
 
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
