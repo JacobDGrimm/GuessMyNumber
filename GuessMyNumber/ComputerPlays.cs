@@ -33,6 +33,16 @@ namespace GuessMyNumber
             }
         }
 
+        public int[] Numbers()
+        {
+            int[] cpr = new int[1000];
+            for (int i = 0; i < cpr.Length; i++)
+            {
+                cpr[i] = i + 1;
+            }
+            return cpr;
+        }
+
         public void Game(int[] num)
         {
             
@@ -40,18 +50,18 @@ namespace GuessMyNumber
                 if (num.Length == 1)
                 {
                     if (num[0] == chosenNumber)
-                        Console.WriteLine($"The number has been found! {chosenNumber} was the number");
+                        Console.WriteLine($"The number has been found! {chosenNumber} was the number. It took me {guessCount} guesses");
                     return;
                 }
                 if (chosenNumber == (num[(num.Length / 2) - 1]))
                 {
-                    Console.WriteLine($"The number has been found! {chosenNumber} was the number");
+                    Console.WriteLine($"The number has been found! {chosenNumber} was the number. It took me {guessCount} guesses");
                     return;
                 }
                 if (chosenNumber > (num[(num.Length / 2) - 1]))
                 {
                     Console.WriteLine($"{num[(num.Length / 2) - 1]} is too low!");
-
+                    guessCount++;
                     for (int i = 0; i < newr.Length; i++)
                     {
                         newr[i] = num[i + num.Length / 2];
@@ -61,6 +71,7 @@ namespace GuessMyNumber
                 if (chosenNumber < (num[(num.Length / 2) - 1]))
                 {
                     Console.WriteLine($"{num[(num.Length / 2) - 1]} is too high!");
+                    guessCount++;
 
                     for (int i = 0; i < newr.Length; i++)
                     {

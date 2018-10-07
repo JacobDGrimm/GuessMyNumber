@@ -25,6 +25,15 @@ namespace GuessMyNumber
 
             HP.NumberPicker();
             HP.GuessingGame();
+
+            Console.WriteLine("My turn! Computer guessing game!");
+
+            ComputerPlays CP = new ComputerPlays();
+
+
+            CP.NumberPicker();
+            CP.Game(CP.Numbers());
+            
         }
     }
 }
