@@ -18,6 +18,13 @@ namespace GuessMyNumber
 
             BN.NumberPicker();
             BN.Bisector(arr);
+
+            Console.WriteLine("Human guessing game! 1 - 1000");
+
+            HumanPlays HP = new HumanPlays();
+
+            HP.NumberPicker();
+            HP.GuessingGame();
         }
     }
 }
